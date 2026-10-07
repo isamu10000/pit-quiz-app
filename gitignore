@@ -1,0 +1,7 @@
+# 認証情報は絶対にコミットしない
+.streamlit/secrets.toml
+*.json
+!package.json
+__pycache__/
+.venv/
+.DS_Store
