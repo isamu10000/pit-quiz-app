@@ -210,10 +210,51 @@ st.sidebar.markdown(
     f"(at least {MIN_EXCHANGES} required to submit)"
 )
 
+STEP_CSS = """
+<style>
+.step-banner {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 28px 0 10px 0;
+    color: #ffffff;
+}
+.step-banner .step-no {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+}
+.step-banner .step-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2px 0 4px 0;
+}
+.step-banner .step-sub { font-size: 0.95rem; opacity: 0.95; }
+.step-1 { background: #1f5fae; }
+.step-2 { background: #1d7a46; }
+</style>
+"""
+st.markdown(STEP_CSS, unsafe_allow_html=True)
+
+
+def step_banner(css_class, step_no, title, sub):
+    st.markdown(
+        f'<div class="step-banner {css_class}"><div class="step-no">{step_no}</div>'
+        f'<div class="step-title">{title}</div><div class="step-sub">{sub}</div></div>',
+        unsafe_allow_html=True,
+    )
+
+
 st.caption(quiz["week_label"])
 st.title(quiz["title"])
 if quiz.get("reading"):
     st.markdown(f"📖 *{quiz['reading']}*")
+
+st.markdown(
+    f"**How this quiz works:** "
+    f"**Step 1** – discuss the question with the AI tutor (at least {MIN_EXCHANGES} exchanges) → "
+    f"**Step 2** – write and submit your final answer at the bottom of this page."
+)
 
 with st.expander("Background", expanded=True):
     st.markdown(quiz["scenario"])
@@ -227,91 +268,120 @@ with st.expander("Key concepts"):
     for name, desc in quiz["concepts"]:
         st.markdown(f"- **{name}**: {desc}")
 
-# ---- tutor chat
-st.markdown("### 💬 Discuss with the AI tutor")
-for m in st.session_state.messages:
-    with st.chat_message(m["role"]):
-        st.markdown(m["content"])
+# ---- STEP 1: tutor chat
+n_ex = st.session_state.exchanges
+step_banner(
+    "step-1", "STEP 1",
+    "💬 Discuss with the AI tutor",
+    f"Exchanges so far: {n_ex} / {MAX_EXCHANGES} — at least {MIN_EXCHANGES} are required before you can submit.",
+)
 
 chat_disabled = closed or st.session_state.submitted is not None \
-    or st.session_state.exchanges >= MAX_EXCHANGES
-if st.session_state.exchanges >= MAX_EXCHANGES and not st.session_state.submitted:
-    st.caption("You have used all tutor exchanges. Please write and submit your answer below.")
+    or n_ex >= MAX_EXCHANGES
 
-prompt = st.chat_input("Type your thoughts here…", disabled=chat_disabled)
+with st.container(border=True):
+    st.progress(min(n_ex, MAX_EXCHANGES) / MAX_EXCHANGES)
+    # 会話は高さ固定のスクロール枠に表示する
+    chat_box = st.container(height=480)
+    with chat_box:
+        for m in st.session_state.messages:
+            with st.chat_message(m["role"]):
+                st.markdown(m["content"])
+
+    # コンテナ内に置くと chat_input は画面下に固定されず、この枠の中に表示される
+    prompt = st.chat_input("Type your message to the tutor here…", disabled=chat_disabled)
+
+    if n_ex >= MAX_EXCHANGES and not st.session_state.submitted:
+        st.caption("You have used all tutor exchanges. Please go to Step 2 below.")
+
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
-    exchange_no = st.session_state.exchanges + 1
-    with st.chat_message("user"):
-        st.markdown(prompt)
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking…"):
-            try:
-                reply = ask_tutor(quiz, st.session_state.messages, exchange_no)
-            except Exception as e:
-                st.session_state.messages.pop()
-                st.error(f"The tutor could not respond. Please try again. ({e})")
-                st.stop()
-        st.markdown(reply)
+    exchange_no = n_ex + 1
+    with chat_box:
+        with st.chat_message("user"):
+            st.markdown(prompt)
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking…"):
+                try:
+                    reply = ask_tutor(quiz, st.session_state.messages, exchange_no)
+                except Exception as e:
+                    st.session_state.messages.pop()
+                    st.error(f"The tutor could not respond. Please try again. ({e})")
+                    st.stop()
+            st.markdown(reply)
     st.session_state.messages.append({"role": "assistant", "content": reply})
     st.session_state.exchanges = exchange_no
     st.rerun()
 
-# ---- final answer
-st.markdown("### ✍️ Your final answer")
-answer = st.text_area(
-    "Final answer",
-    height=220,
-    key=f"answer_{quiz['id']}",
-    label_visibility="collapsed",
-    disabled=closed or st.session_state.submitted is not None,
+if not closed and st.session_state.submitted is None:
+    if n_ex >= MIN_EXCHANGES:
+        st.success("✅ You have enough exchanges. Scroll down to Step 2 to write and submit your answer.")
+    else:
+        st.caption(f"👆 Chat with the tutor first. Step 2 opens for submission after "
+                   f"{MIN_EXCHANGES} exchanges ({MIN_EXCHANGES - n_ex} more to go).")
+
+# ---- STEP 2: final answer
+step_banner(
+    "step-2", "STEP 2",
+    "✍️ Write and submit your final answer",
+    f"{lo}–{hi} words, in your own words. You can only submit once.",
 )
-wc = count_words(answer)
-st.caption(f"Word count: {wc} (required: {lo}–{hi})")
 
-problems = []
-if not student_name:
-    problems.append("enter your full name in the sidebar")
-if st.session_state.exchanges < MIN_EXCHANGES:
-    problems.append(f"have at least {MIN_EXCHANGES} exchanges with the tutor "
-                    f"(now {st.session_state.exchanges})")
-if not (lo <= wc <= hi):
-    problems.append(f"keep your answer within {lo}–{hi} words")
-
-if st.session_state.submitted:
-    rec = st.session_state.submitted
-    st.success(f"Submitted at {rec['timestamp']} (JST). Thank you!")
-    st.download_button(
-        "Download a copy of your submission (JSON)",
-        data=json.dumps(rec, ensure_ascii=False, indent=2),
-        file_name=f"{rec['quiz_id']}_{re.sub(r'[^A-Za-z0-9]+', '_', rec['student_name'])}.json",
-        mime="application/json",
+with st.container(border=True):
+    answer = st.text_area(
+        "Final answer",
+        height=220,
+        key=f"answer_{quiz['id']}",
+        label_visibility="collapsed",
+        placeholder="Write your final answer here…",
+        disabled=closed or st.session_state.submitted is not None,
     )
-elif closed:
-    st.warning("The deadline has passed. Submissions are closed.")
-else:
-    if problems:
-        st.caption("To submit, please: " + "; ".join(problems) + ".")
-    if st.button("Submit", type="primary", disabled=bool(problems)):
-        record = {
-            "timestamp": dt.datetime.now(TZ).strftime("%Y-%m-%d %H:%M:%S"),
-            "student_name": student_name,
-            "quiz_id": quiz["id"],
-            "quiz_title": quiz["title"],
-            "final_answer": answer.strip(),
-            "word_count": wc,
-            "exchange_count": st.session_state.exchanges,
-            "conversation_log": conversation_log(st.session_state.messages),
-        }
-        with st.spinner("Saving your submission…"):
-            try:
-                save_to_sheet(record)
-            except Exception as e:
-                st.error(
-                    "Your answer could not be saved. Please do not close this page; "
-                    "copy your answer and contact the instructor. "
-                    f"(Details: {e})"
-                )
-                st.stop()
-        st.session_state.submitted = record
-        st.rerun()
+    wc = count_words(answer)
+    st.caption(f"Word count: {wc} (required: {lo}–{hi})")
+
+    problems = []
+    if not student_name:
+        problems.append("enter your full name in the sidebar")
+    if st.session_state.exchanges < MIN_EXCHANGES:
+        problems.append(f"have at least {MIN_EXCHANGES} exchanges with the tutor "
+                        f"(now {st.session_state.exchanges})")
+    if not (lo <= wc <= hi):
+        problems.append(f"keep your answer within {lo}–{hi} words")
+
+    if st.session_state.submitted:
+        rec = st.session_state.submitted
+        st.success(f"Submitted at {rec['timestamp']} (JST). Thank you!")
+        st.download_button(
+            "Download a copy of your submission (JSON)",
+            data=json.dumps(rec, ensure_ascii=False, indent=2),
+            file_name=f"{rec['quiz_id']}_{re.sub(r'[^A-Za-z0-9]+', '_', rec['student_name'])}.json",
+            mime="application/json",
+        )
+    elif closed:
+        st.warning("The deadline has passed. Submissions are closed.")
+    else:
+        if problems:
+            st.caption("To submit, please: " + "; ".join(problems) + ".")
+        if st.button("Submit", type="primary", disabled=bool(problems)):
+            record = {
+                "timestamp": dt.datetime.now(TZ).strftime("%Y-%m-%d %H:%M:%S"),
+                "student_name": student_name,
+                "quiz_id": quiz["id"],
+                "quiz_title": quiz["title"],
+                "final_answer": answer.strip(),
+                "word_count": wc,
+                "exchange_count": st.session_state.exchanges,
+                "conversation_log": conversation_log(st.session_state.messages),
+            }
+            with st.spinner("Saving your submission…"):
+                try:
+                    save_to_sheet(record)
+                except Exception as e:
+                    st.error(
+                        "Your answer could not be saved. Please do not close this page; "
+                        "copy your answer and contact the instructor. "
+                        f"(Details: {e})"
+                    )
+                    st.stop()
+            st.session_state.submitted = record
+            st.rerun()
