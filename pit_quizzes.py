@@ -108,7 +108,7 @@ PIT_QUIZZES = [
     },
     {
         "id": "pit-2",
-        "active": True,
+        "active": False,
         "week_label": "Reading: Ostrom (1990), Chapters 1-2",
         "title": "PIT-2: Beyond Leviathan and Privatization",
         "assigned_date": "2026-10-14",
@@ -224,6 +224,152 @@ PIT_QUIZZES = [
             "- Listing the problems of Leviathan and of privatization separately "
             "without identifying what they have in common. The question asks for "
             "the shared assumption."
+        ),
+    },
+    {
+        "id": "pit-3",
+        "active": True,
+        "week_label": "Reading: Ostrom (1990), Chapters 3 and 5",
+        "title": "PIT-3: Design Principles in Practice",
+        "assigned_date": "2026-10-21",
+        "due_date": "2026-10-27 12:00",  # JST
+        "reading": (
+            "Elinor Ostrom. 1990. Governing the Commons: The Evolution of "
+            "Institutions for Collective Action. Cambridge University Press, "
+            "pp. 58-102 (Ch. 3) and pp. 143-181 (Ch. 5)."
+        ),
+        "scenario": (
+            "In Chapter 3, Ostrom examines common-pool resources that users have "
+            "governed themselves for very long periods: mountain meadows and "
+            "forests in Törbel (Switzerland) and in Japanese villages, irrigation "
+            "systems in the Spanish *huertas*, and the *zanjera* irrigation "
+            "communities in the Philippines. Although their specific rules differ "
+            "greatly, she identifies eight **design principles** that these "
+            "long-enduring institutions share:\n\n"
+            "1. Clearly defined boundaries\n"
+            "2. Congruence between appropriation and provision rules and local "
+            "conditions\n"
+            "3. Collective-choice arrangements\n"
+            "4. Monitoring\n"
+            "5. Graduated sanctions\n"
+            "6. Conflict-resolution mechanisms\n"
+            "7. Minimal recognition of rights to organize\n"
+            "8. Nested enterprises (for larger systems)\n\n"
+            "In Chapter 5, she turns to cases of institutional failure and "
+            "fragility, such as inshore fisheries in Turkey, Sri Lanka, and Nova "
+            "Scotia and irrigation projects in Sri Lanka. In these cases, several "
+            "of the design principles are missing or only weakly present.\n\n"
+            "The design principles are not a blueprint of specific rules. They "
+            "describe *conditions* that help explain why some self-governing "
+            "institutions endure and others break down."
+        ),
+        "question": (
+            "Pick one of Ostrom's design principles. Think about any case you are "
+            "familiar with and explain why the principle is crucial to success or "
+            "failure in the case. The example could be any case, including "
+            "everyday or small-scale commons."
+        ),
+        "word_limit": (100, 120),
+        "concepts": [
+            ("1. Clearly defined boundaries",
+             "Who has the right to withdraw resource units, and the boundaries of "
+             "the resource itself, are clearly defined."),
+            ("2. Congruence with local conditions",
+             "Rules restricting time, place, technology, and quantity of use are "
+             "matched to local conditions and to the rules on labor, materials, "
+             "and money that users must contribute."),
+            ("3. Collective-choice arrangements",
+             "Most individuals affected by the operational rules can participate "
+             "in modifying them."),
+            ("4. Monitoring",
+             "Those who monitor resource conditions and users' behavior are users "
+             "themselves or are accountable to the users."),
+            ("5. Graduated sanctions",
+             "Rule breakers receive sanctions that grow with the seriousness and "
+             "repetition of the offense, applied by users or officials "
+             "accountable to them."),
+            ("6. Conflict-resolution mechanisms",
+             "Users and their officials have rapid, low-cost local arenas to "
+             "resolve conflicts among users or between users and officials."),
+            ("7. Minimal recognition of rights to organize",
+             "Users' rights to devise their own institutions are not challenged "
+             "by external government authorities."),
+            ("8. Nested enterprises",
+             "In larger systems, appropriation, provision, monitoring, "
+             "enforcement, conflict resolution, and governance are organized in "
+             "multiple nested layers."),
+            ("Common-pool resource (CPR)",
+             "A resource where excluding users is costly and one person's use "
+             "subtracts from what is left for others."),
+        ],
+        "opening_message": (
+            "Hello! I'm your tutor for this week's quiz on Ostrom's *Governing the "
+            "Commons* (Chapters 3 and 5). I won't write the answer for you, but "
+            "I'll help you build your argument.\n\n"
+            "To start: **which design principle** are you interested in, and "
+            "**what case** are you thinking of? It can be anything you know well, "
+            "from a village irrigation system to a shared kitchen or lab fridge. "
+            "Did the arrangement in your case succeed or fail?"
+        ),
+        "tutor_extra": (
+            "Guide the student through these steps, roughly in order, adapting to "
+            "where they are:\n"
+            "1. Pin down ONE design principle and ONE case. If the student has no "
+            "case yet, help them brainstorm from their own experience (home "
+            "country, workplace, university, housing) by asking about shared "
+            "things that can be overused or that require contributions to "
+            "maintain. Do not suggest a finished case for them; offer a few "
+            "types of commons and let them choose.\n"
+            "2. Check that the case is a common-pool resource with an identifiable "
+            "group of users: excluding users is costly and use is subtractable. "
+            "Redirect pure public goods (national defense, 'the environment' in "
+            "general) and problems with no identifiable user group (global "
+            "climate) toward a more specific, bounded resource. Everyday and "
+            "small-scale commons are fully acceptable.\n"
+            "3. Ask for at least ONE specific rule, practice, or arrangement in "
+            "the case that corresponds to the principle (e.g., who counts as a "
+            "member, what the penalty for a first offense is, who checks "
+            "compliance). Push answers that only say 'the community managed it "
+            "well' toward concrete detail.\n"
+            "4. Push for the causal mechanism: HOW does the principle produce "
+            "success, or how does its absence produce failure? Useful prompts: "
+            "What would happen in this case without the principle? Is there a "
+            "moment when it broke down or was introduced, and what changed? How "
+            "does the principle affect users' incentives, information, trust, or "
+            "willingness to follow the rules (link to the Chapter 2 puzzles of "
+            "credible commitment and mutual monitoring)?\n"
+            "5. Encourage them to connect the case briefly to a case in Chapter 3 "
+            "or Chapter 5 if it helps, but the main analysis should be about "
+            "their own case. If a student uses a case from the book, push them to "
+            "go beyond restating Ostrom's description.\n"
+            "6. Help them fit the argument into 100-120 words: principle, case, "
+            "specific rule, mechanism, outcome. Mentioning a second principle is "
+            "fine only if it supports the main one.\n"
+            "Common misunderstandings to correct gently:\n"
+            "- Blurring principles 1, 2, and 3. Boundaries are about who may use "
+            "the resource; congruence is about whether the content of the rules "
+            "fits local conditions and balances costs and benefits; "
+            "collective-choice arrangements are about who gets to change the "
+            "rules. Ask the student which of these their example actually "
+            "describes.\n"
+            "- Treating graduated sanctions as 'strict' or 'harsh' punishment. "
+            "The point is that sanctions start small and escalate, so that "
+            "occasional rule breakers are not alienated while persistent ones "
+            "are deterred, and that sanctions signal that others are complying.\n"
+            "- Treating monitoring as surveillance by an outside authority. "
+            "Ostrom's principle is that monitors are users or are accountable to "
+            "them.\n"
+            "- Treating principle 7 as government support or funding. It means "
+            "external authorities do not challenge users' right to make their "
+            "own rules.\n"
+            "- Applying principle 8 to small, simple cases where it does not "
+            "apply. Nested enterprises concern larger, multi-level systems.\n"
+            "- Treating the design principles as a blueprint of specific rules or "
+            "as a guarantee of success. Ostrom presents them as conditions that "
+            "help explain robust institutions, and she is cautious about "
+            "claiming each one is strictly necessary.\n"
+            "- Simply asserting that the principle is present and the case "
+            "succeeded. The question asks WHY the principle is crucial."
         ),
     },
 ]
