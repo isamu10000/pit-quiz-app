@@ -9,367 +9,145 @@ Quiz definitions for Political Institution Theory (GSID, Nagoya University).
 
 PIT_QUIZZES = [
     {
-        "id": "pit-1",
-        "active": False,
-        "week_label": "Reading: Hall & Taylor (1996)",
-        "title": "PIT-1: Calculus vs. Cultural Approaches to Institutions",
-        "assigned_date": "2026-10-07",
-        "due_date": "2026-10-13 12:00",  # JST
-        "reading": (
-            'Peter A. Hall and Rosemary C. R. Taylor. 1996. "Political Science and '
-            'the Three New Institutionalisms." Political Studies 44: 936-957.'
-        ),
-        "scenario": (
-            "Hall and Taylor (1996) distinguish three 'new institutionalisms' "
-            "(historical, rational choice, and sociological) and show that they "
-            "rest on different answers to a basic question: how do institutions "
-            "affect the behavior of individuals?\n\n"
-            "In the **calculus approach**, people are instrumental and strategic. "
-            "Institutions matter because they change expectations about what "
-            "others will do: they provide information, enforcement mechanisms, and "
-            "penalties for defection. People follow a rule because, given what "
-            "they expect of others, following it pays.\n\n"
-            "In the **cultural approach**, behavior is not fully strategic but is "
-            "bounded by a person's worldview. Institutions supply moral and "
-            "cognitive templates (routines, scripts, familiar patterns) that define "
-            "what action is appropriate, and sometimes what action is even "
-            "imaginable.\n\n"
-            "The two approaches also explain why institutions persist: as an "
-            "equilibrium that no one gains by leaving, or as conventions so taken "
-            "for granted that they are rarely questioned."
-        ),
-        "question": (
-            'Hall and Taylor distinguish a "calculus approach" and a "cultural '
-            'approach" to explaining how institutions shape behavior. Choose one '
-            "rule that people in your country tend to follow (or ignore), and "
-            "explain which approach accounts for it better."
-        ),
-        "word_limit": (100, 120),
-        "concepts": [
-            ("Calculus approach",
-             "Actors maximize goals instrumentally; institutions shape behavior by "
-             "reducing uncertainty about others' actions (information, enforcement, "
-             "sanctions)."),
-            ("Cultural approach",
-             "Behavior is bounded by worldview; institutions provide moral and "
-             "cognitive templates that shape interpretation, preferences, and even "
-             "identity."),
-            ("Institutional persistence",
-             "Calculus: rules persist as equilibria that individuals would lose by "
-             "abandoning. Cultural: rules persist because they are taken for "
-             "granted and rarely become objects of choice."),
-            ("Historical institutionalism",
-             "Eclectic: draws on both the calculus and cultural approaches."),
-            ("Rational choice institutionalism",
-             "Builds mainly on the calculus approach."),
-            ("Sociological institutionalism",
-             "Builds mainly on the cultural approach; emphasizes appropriateness "
-             "and legitimacy over efficiency."),
-        ],
-        "opening_message": (
-            "Hello! I'm your tutor for this week's quiz on Hall and Taylor (1996). "
-            "I won't write the answer for you, but I'll help you sharpen your "
-            "argument.\n\n"
-            "To start: **which rule** are you thinking about, and **in which "
-            "country**? Do people there mostly follow it or ignore it?"
-        ),
-        "tutor_extra": (
-            "Guide the student through these steps, roughly in order, adapting to "
-            "where they are:\n"
-            "1. Pin down ONE concrete rule (formal law or informal norm) and whether "
-            "people follow or ignore it. Push vague choices ('culture of "
-            "punctuality') toward a specific rule.\n"
-            "2. Ask what each approach would say is the mechanism behind the "
-            "behavior: what costs, benefits, and expectations about others "
-            "(calculus) vs. what sense of appropriateness or taken-for-granted "
-            "routine (cultural).\n"
-            "3. Push for observable evidence that distinguishes the two: Do people "
-            "comply when no one is watching or enforcement is absent? Does behavior "
-            "change when penalties or incentives change? Do people describe the "
-            "rule as 'just what one does', or do they weigh the odds of being "
-            "caught? How do newcomers or foreigners behave?\n"
-            "4. Require a justified comparison ('which approach accounts for it "
-            "better'), not a list of both. It is fine to concede that the other "
-            "approach captures part of the story, as historical institutionalists "
-            "would.\n"
-            "Common misunderstandings to correct gently:\n"
-            "- Treating the cultural approach as 'national character' or "
-            "stereotype. It is about institutions supplying cognitive and moral "
-            "templates, not fixed traits of a people.\n"
-            "- Treating the calculus approach as applying only to formal laws. "
-            "Informal norms enforced by social sanctions (shame, exclusion, "
-            "reputation) can be explained in calculus terms. Ask the student "
-            "whether the social pressure they describe works as a sanction "
-            "(calculus) or as an internalized sense of what is right or normal "
-            "(cultural).\n"
-            "- Explaining the rule's origin when the question asks why people "
-            "follow or ignore it now."
-        ),
-    },
-    {
-        "id": "pit-2",
-        "active": False,
-        "week_label": "Reading: Ostrom (1990), Chapters 1-2",
-        "title": "PIT-2: Beyond Leviathan and Privatization",
-        "assigned_date": "2026-10-14",
-        "due_date": "2026-10-20 12:00",  # JST
-        "reading": (
-            "Elinor Ostrom. 1990. Governing the Commons: The Evolution of "
-            "Institutions for Collective Action. Cambridge University Press, "
-            "pp. 1-28 (Ch. 1) and pp. 29-57 (Ch. 2)."
-        ),
-        "scenario": (
-            "Ostrom starts from three influential models that predict the overuse "
-            "of shared resources: Hardin's **tragedy of the commons**, the "
-            "**prisoner's dilemma**, and Olson's **logic of collective action**. "
-            "In each, individuals who act rationally on their own produce an "
-            "outcome that is bad for all of them.\n\n"
-            "From these models, analysts have drawn two opposite policy "
-            "prescriptions, each presented as the *only* way out:\n"
-            "- **Leviathan**: a central government should take control of the "
-            "resource, decide who may use it and how much, and punish violators.\n"
-            "- **Privatization**: the commons should be divided and turned into "
-            "private property, so that each owner bears the costs and benefits "
-            "of their own use.\n\n"
-            "Ostrom rejects both as universal solutions. She points to communities "
-            "of fishers, herders, and irrigators that have designed and enforced "
-            "their own rules for long periods, and in Chapter 2 she asks how a "
-            "group of resource users can organize themselves to solve the problems "
-            "of supplying institutions, making credible commitments, and "
-            "monitoring one another."
-        ),
-        "question": (
-            "Ostrom rejects both 'Leviathan' and 'privatization' as solutions to "
-            "the commons dilemma. What assumption do these two solutions share, "
-            "and why does Ostrom think it is wrong?"
-        ),
-        "word_limit": (100, 120),
-        "concepts": [
-            ("Tragedy of the commons / prisoner's dilemma / logic of collective action",
-             "Three models in which individually rational behavior leads to "
-             "collectively irrational outcomes such as overgrazing or free riding."),
-            ("Leviathan solution",
-             "Central (external) authority owns or regulates the resource and "
-             "imposes rules and sanctions on users."),
-            ("Privatization solution",
-             "The commons is divided into private property rights, so each owner "
-             "internalizes the costs of their own use."),
-            ("Common-pool resource (CPR)",
-             "A resource system where excluding users is costly and one person's "
-             "use subtracts from what is left for others."),
-            ("Resource system vs. resource units",
-             "The stock (e.g., a fishing ground) vs. the flow appropriated from it "
-             "(e.g., tons of fish caught)."),
-            ("Appropriators and providers",
-             "Those who withdraw resource units vs. those who arrange for the "
-             "provision or maintenance of the resource."),
-            ("Self-organization",
-             "Users themselves devise, monitor, and enforce rules, e.g., via a "
-             "binding agreement they enforce or pay for themselves."),
-            ("Three puzzles (Ch. 2)",
-             "The supply of new institutions, credible commitment to follow the "
-             "rules, and mutual monitoring."),
-        ],
-        "opening_message": (
-            "Hello! I'm your tutor for this week's quiz on Ostrom's *Governing the "
-            "Commons* (Chapters 1-2). I won't write the answer for you, but I'll "
-            "help you build your argument.\n\n"
-            "To start: Leviathan and privatization look like opposites, state vs. "
-            "market. **In each solution, who designs and enforces the rules?** "
-            "And where are the resource users themselves in that picture?"
-        ),
-        "tutor_extra": (
-            "Guide the student through these steps, roughly in order, adapting to "
-            "where they are:\n"
-            "1. Get the student to describe each solution concretely: who decides "
-            "the rules, who monitors, who sanctions. Leviathan relies on a central "
-            "authority; privatization also needs someone to define, assign, and "
-            "enforce property rights.\n"
-            "2. Lead them to the shared assumption. The core answer: both treat "
-            "the resource users as trapped in the dilemma and unable to change "
-            "their own situation, so the institutional solution must be designed "
-            "and imposed from outside (by the state or by an externally enforced "
-            "property-rights regime). A related, acceptable layer: both rest on "
-            "the models' assumptions that users cannot communicate, build trust, "
-            "or make binding agreements among themselves, and both take for "
-            "granted that the external designer has accurate information and can "
-            "monitor and sanction at low cost.\n"
-            "3. Push them to explain WHY Ostrom thinks this is wrong, using the "
-            "reading: (a) empirically, many groups of appropriators (e.g., the "
-            "inshore fishers she discusses who allocate fishing spots among "
-            "themselves) have crafted and enforced their own rules for long "
-            "periods; (b) the models fit only some settings. Real CPR users often "
-            "interact repeatedly, can talk, and can change their rules; "
-            "(c) external solutions have their own costs and failure points: a "
-            "central agency with incomplete information can impose the wrong "
-            "rules and sanctions, and some resources (e.g., moving fish stocks, "
-            "uncertain rainfall on pastures) cannot easily be divided into "
-            "private parcels; (d) users can reach a better outcome through a "
-            "self-designed and self-enforced agreement.\n"
-            "4. Ask them to connect the critique to Chapter 2: self-organization "
-            "is possible but not automatic, which is why Ostrom poses the puzzles "
-            "of supplying institutions, credible commitment, and mutual monitoring.\n"
-            "Common misunderstandings to correct gently:\n"
-            "- Saying the shared assumption is simply 'people are selfish' or "
-            "'people are rational'. Ostrom keeps rational, self-interested actors "
-            "in her own analysis. Ask what, beyond self-interest, the models "
-            "assume about users' ability to communicate and change rules.\n"
-            "- Reading Ostrom as anti-state, anti-market, or as claiming that "
-            "communities always succeed. She rejects any single panacea, accepts "
-            "that tragedies do happen, and notes that real institutions often "
-            "mix public and private elements. Her question is under what "
-            "conditions self-organization works.\n"
-            "- Confusing a common-pool resource with a pure public good. Use of a "
-            "CPR is subtractable.\n"
-            "- Listing the problems of Leviathan and of privatization separately "
-            "without identifying what they have in common. The question asks for "
-            "the shared assumption."
-        ),
-    },
-    {
-        "id": "pit-3",
+        "id": "pit-4",
         "active": True,
-        "week_label": "Reading: Ostrom (1990), Chapters 3 and 5",
-        "title": "PIT-3: Design Principles in Practice",
-        "assigned_date": "2026-10-21",
-        "due_date": "2026-10-27 12:00",  # JST
+        "week_label": "Reading: Putnam (1993), Chapters 3-4",
+        "title": "PIT-4: Measuring Institutional Performance",
+        "assigned_date": "2026-11-02 09:00",  # JST
+        "due_date": "2026-11-10 12:00",  # JST
         "reading": (
-            "Elinor Ostrom. 1990. Governing the Commons: The Evolution of "
-            "Institutions for Collective Action. Cambridge University Press, "
-            "pp. 58-102 (Ch. 3) and pp. 143-181 (Ch. 5)."
+            "Robert D. Putnam. 1993. Making Democracy Work: Civic Traditions in "
+            "Modern Italy. Princeton University Press, pp. 63-82 (Ch. 3) and "
+            "pp. 83-120 (Ch. 4)."
         ),
         "scenario": (
-            "In Chapter 3, Ostrom examines common-pool resources that users have "
-            "governed themselves for very long periods: mountain meadows and "
-            "forests in Törbel (Switzerland) and in Japanese villages, irrigation "
-            "systems in the Spanish *huertas*, and the *zanjera* irrigation "
-            "communities in the Philippines. Although their specific rules differ "
-            "greatly, she identifies eight **design principles** that these "
-            "long-enduring institutions share:\n\n"
-            "1. Clearly defined boundaries\n"
-            "2. Congruence between appropriation and provision rules and local "
-            "conditions\n"
-            "3. Collective-choice arrangements\n"
-            "4. Monitoring\n"
-            "5. Graduated sanctions\n"
-            "6. Conflict-resolution mechanisms\n"
-            "7. Minimal recognition of rights to organize\n"
-            "8. Nested enterprises (for larger systems)\n\n"
-            "In Chapter 5, she turns to cases of institutional failure and "
-            "fragility, such as inshore fisheries in Turkey, Sri Lanka, and Nova "
-            "Scotia and irrigation projects in Sri Lanka. In these cases, several "
-            "of the design principles are missing or only weakly present.\n\n"
-            "The design principles are not a blueprint of specific rules. They "
-            "describe *conditions* that help explain why some self-governing "
-            "institutions endure and others break down."
+            "In 1970, Italy created twenty new regional governments with similar "
+            "formal structures and powers. Putnam and his colleagues followed "
+            "them for two decades and found that some performed far better than "
+            "others.\n\n"
+            "To compare them, Chapter 3 builds an index of **institutional "
+            "performance** from twelve indicators. They cover three aspects of "
+            "government: the **policy process** (e.g., cabinet stability, budget "
+            "promptness, statistical and information services), **policy "
+            "pronouncements** (e.g., reform legislation, legislative innovation), "
+            "and **policy implementation** (e.g., day care centers, family "
+            "clinics, industrial policy instruments, agricultural spending "
+            "capacity, local health unit expenditures, housing and urban "
+            "development, bureaucratic responsiveness). Putnam argues that a good "
+            "measure should be comprehensive, internally consistent, reliable "
+            "over time, and consistent with the judgments of the regions' own "
+            "constituents, and he checks the index against surveys of community "
+            "leaders and ordinary citizens.\n\n"
+            "Chapter 4 then asks why performance differs. Putnam compares "
+            "**economic modernity** with the **civic community**, which he "
+            "measures with indicators such as associational life, newspaper "
+            "readership, referendum turnout, and preference voting.\n\n"
+            "Any measurement involves choices about what to count and what to "
+            "leave out. This week you will evaluate Putnam's choices and propose "
+            "one of your own."
         ),
         "question": (
-            "Pick one of Ostrom's design principles. Think about any case you are "
-            "familiar with and explain why the principle is crucial to success or "
-            "failure in the case. The example could be any case, including "
-            "everyday or small-scale commons."
+            "Putnam measures institutional performance with twelve indicators. "
+            "Identify one strength and one weakness of this measurement. Can you "
+            "suggest an alternative measurement that is feasible and addresses "
+            "the weakness that you identified?"
         ),
         "word_limit": (100, 120),
         "concepts": [
-            ("1. Clearly defined boundaries",
-             "Who has the right to withdraw resource units, and the boundaries of "
-             "the resource itself, are clearly defined."),
-            ("2. Congruence with local conditions",
-             "Rules restricting time, place, technology, and quantity of use are "
-             "matched to local conditions and to the rules on labor, materials, "
-             "and money that users must contribute."),
-            ("3. Collective-choice arrangements",
-             "Most individuals affected by the operational rules can participate "
-             "in modifying them."),
-            ("4. Monitoring",
-             "Those who monitor resource conditions and users' behavior are users "
-             "themselves or are accountable to the users."),
-            ("5. Graduated sanctions",
-             "Rule breakers receive sanctions that grow with the seriousness and "
-             "repetition of the offense, applied by users or officials "
-             "accountable to them."),
-            ("6. Conflict-resolution mechanisms",
-             "Users and their officials have rapid, low-cost local arenas to "
-             "resolve conflicts among users or between users and officials."),
-            ("7. Minimal recognition of rights to organize",
-             "Users' rights to devise their own institutions are not challenged "
-             "by external government authorities."),
-            ("8. Nested enterprises",
-             "In larger systems, appropriation, provision, monitoring, "
-             "enforcement, conflict resolution, and governance are organized in "
-             "multiple nested layers."),
-            ("Common-pool resource (CPR)",
-             "A resource where excluding users is costly and one person's use "
-             "subtracts from what is left for others."),
+            ("Institutional performance",
+             "How well a government responds to its constituents' demands and "
+             "acts effectively on them; Putnam's dependent variable."),
+            ("Twelve indicators",
+             "Cabinet stability, budget promptness, statistical and information "
+             "services, reform legislation, legislative innovation, day care "
+             "centers, family clinics, industrial policy instruments, "
+             "agricultural spending capacity, local health unit expenditures, "
+             "housing and urban development, bureaucratic responsiveness."),
+            ("Three aspects of government",
+             "Policy process, policy pronouncements, and policy implementation."),
+            ("Criteria for a good measure",
+             "Comprehensive, internally consistent, reliable (stable over time), "
+             "and corresponding to the objectives and evaluations of the "
+             "government's protagonists and constituents."),
+            ("Validation with surveys",
+             "Putnam compares the index with assessments by community leaders "
+             "and with citizens' satisfaction with their regional government."),
+            ("Economic modernity",
+             "The rival explanation of performance in Ch. 4: wealth, "
+             "industrialization, and socioeconomic development."),
+            ("Civic community",
+             "Civic engagement, political equality, solidarity, trust, and "
+             "associations; measured with associations, newspaper readership, "
+             "referendum turnout, and (inversely) preference voting."),
         ],
         "opening_message": (
-            "Hello! I'm your tutor for this week's quiz on Ostrom's *Governing the "
-            "Commons* (Chapters 3 and 5). I won't write the answer for you, but "
-            "I'll help you build your argument.\n\n"
-            "To start: **which design principle** are you interested in, and "
-            "**what case** are you thinking of? It can be anything you know well, "
-            "from a village irrigation system to a shared kitchen or lab fridge. "
-            "Did the arrangement in your case succeed or fail?"
+            "Hello! I'm your tutor for this week's quiz on Putnam's *Making "
+            "Democracy Work* (Chapters 3-4). I won't write the answer for you, "
+            "and I won't tell you which strength or weakness to choose. I'll "
+            "help you develop and test your own argument.\n\n"
+            "To start: looking at Putnam's twelve indicators, **what do you see "
+            "as one strength and one weakness** of measuring performance this "
+            "way? A first rough idea is fine."
         ),
         "tutor_extra": (
-            "Guide the student through these steps, roughly in order, adapting to "
-            "where they are:\n"
-            "1. Pin down ONE design principle and ONE case. If the student has no "
-            "case yet, help them brainstorm from their own experience (home "
-            "country, workplace, university, housing) by asking about shared "
-            "things that can be overused or that require contributions to "
-            "maintain. Do not suggest a finished case for them; offer a few "
-            "types of commons and let them choose.\n"
-            "2. Check that the case is a common-pool resource with an identifiable "
-            "group of users: excluding users is costly and use is subtractable. "
-            "Redirect pure public goods (national defense, 'the environment' in "
-            "general) and problems with no identifiable user group (global "
-            "climate) toward a more specific, bounded resource. Everyday and "
-            "small-scale commons are fully acceptable.\n"
-            "3. Ask for at least ONE specific rule, practice, or arrangement in "
-            "the case that corresponds to the principle (e.g., who counts as a "
-            "member, what the penalty for a first offense is, who checks "
-            "compliance). Push answers that only say 'the community managed it "
-            "well' toward concrete detail.\n"
-            "4. Push for the causal mechanism: HOW does the principle produce "
-            "success, or how does its absence produce failure? Useful prompts: "
-            "What would happen in this case without the principle? Is there a "
-            "moment when it broke down or was introduced, and what changed? How "
-            "does the principle affect users' incentives, information, trust, or "
-            "willingness to follow the rules (link to the Chapter 2 puzzles of "
-            "credible commitment and mutual monitoring)?\n"
-            "5. Encourage them to connect the case briefly to a case in Chapter 3 "
-            "or Chapter 5 if it helps, but the main analysis should be about "
-            "their own case. If a student uses a case from the book, push them to "
-            "go beyond restating Ostrom's description.\n"
-            "6. Help them fit the argument into 100-120 words: principle, case, "
-            "specific rule, mechanism, outcome. Mentioning a second principle is "
-            "fine only if it supports the main one.\n"
-            "Common misunderstandings to correct gently:\n"
-            "- Blurring principles 1, 2, and 3. Boundaries are about who may use "
-            "the resource; congruence is about whether the content of the rules "
-            "fits local conditions and balances costs and benefits; "
-            "collective-choice arrangements are about who gets to change the "
-            "rules. Ask the student which of these their example actually "
-            "describes.\n"
-            "- Treating graduated sanctions as 'strict' or 'harsh' punishment. "
-            "The point is that sanctions start small and escalate, so that "
-            "occasional rule breakers are not alienated while persistent ones "
-            "are deterred, and that sanctions signal that others are complying.\n"
-            "- Treating monitoring as surveillance by an outside authority. "
-            "Ostrom's principle is that monitors are users or are accountable to "
-            "them.\n"
-            "- Treating principle 7 as government support or funding. It means "
-            "external authorities do not challenge users' right to make their "
-            "own rules.\n"
-            "- Applying principle 8 to small, simple cases where it does not "
-            "apply. Nested enterprises concern larger, multi-level systems.\n"
-            "- Treating the design principles as a blueprint of specific rules or "
-            "as a guarantee of success. Ostrom presents them as conditions that "
-            "help explain robust institutions, and she is cautious about "
-            "claiming each one is strictly necessary.\n"
-            "- Simply asserting that the principle is present and the case "
-            "succeeded. The question asks WHY the principle is crucial."
+            "Your role this week is to draw out and strengthen the student's OWN "
+            "evaluation, not to lead them to a particular answer.\n"
+            "Neutrality rules (very important):\n"
+            "- Do NOT suggest, hint at, or rank specific strengths, weaknesses, "
+            "or alternative measurements, even as 'examples' or 'one possibility "
+            "is...'. Do not steer students toward any favored critique (e.g., "
+            "outputs vs. outcomes, citizen experience, normative bias, a single "
+            "indicator's validity) or any favored alternative (e.g., audit "
+            "studies, outcome statistics, surveys).\n"
+            "- Always ask first what the student thinks, then respond to THEIR "
+            "idea. If a student has no idea yet, ask open questions that make "
+            "them look at the measure themselves (e.g., 'Go through the twelve "
+            "indicators. Which one would you trust most, and which least? Why?', "
+            "'What do you think Putnam wanted the index to capture?', 'If you "
+            "were a citizen of one of these regions, what would good government "
+            "mean to you?'), without supplying the answer.\n"
+            "- Any reasonable, well-argued strength, weakness, or alternative is "
+            "acceptable. Evaluate the reasoning, not whether it matches a "
+            "particular view.\n"
+            "How to give constructive advice:\n"
+            "1. Make sure the answer covers all three parts: one strength, one "
+            "weakness, and an alternative measurement.\n"
+            "2. Ask the student to ground the strength and weakness in what "
+            "Putnam actually does in Chapter 3 (which indicators, which criteria, "
+            "how he validates the index). When a claim is vague or general, ask "
+            "them to point to the relevant part of the book. If a claim "
+            "conflicts with the text, ask them to re-check the relevant pages "
+            "rather than correcting the content for them in detail; you may "
+            "state plainly that Putnam addresses the point and say where (e.g., "
+            "the comparison with leader and citizen surveys). Chapter 4 may be "
+            "used if it supports their argument (e.g., how the performance index "
+            "is used to compare explanations), but is not required.\n"
+            "3. Check the logical link: does the alternative actually address "
+            "the weakness the student identified? Ask 'How exactly would your "
+            "measure fix the problem you described?'\n"
+            "4. Check feasibility by asking the student to specify: what would "
+            "be measured, who would collect the data, how, and for how many "
+            "regions or over what period. Ask whether it could be compared "
+            "across all twenty regions as Putnam does.\n"
+            "5. Encourage them to consider a cost of their own alternative, "
+            "e.g., whether it would still meet Putnam's criteria "
+            "(comprehensiveness, consistency, reliability), or whether it might "
+            "measure something other than institutional performance. Let the "
+            "student find the problem; do not name it for them.\n"
+            "6. Help them fit the answer into 100-120 words: strength, weakness, "
+            "alternative, and why the alternative addresses the weakness.\n"
+            "Common issues to address gently (by asking, not by supplying an "
+            "answer):\n"
+            "- Confusing the institutional performance index (Ch. 3, the outcome "
+            "to be explained) with the civic community index (Ch. 4, an "
+            "explanation).\n"
+            "- Critiquing Putnam's explanation (civic traditions) instead of his "
+            "measurement of performance.\n"
+            "- Listing several strengths or weaknesses superficially instead of "
+            "developing one of each.\n"
+            "- Proposing an alternative that is unrelated to the weakness, or "
+            "that is not realistically feasible (e.g., 'measure everything "
+            "citizens experience')."
         ),
     },
 ]
