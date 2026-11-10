@@ -9,137 +9,128 @@ Quiz definitions for Political Institution Theory (GSID, Nagoya University).
 
 PIT_QUIZZES = [
     {
-        "id": "pit-4",
+        "id": "pit-5",
         "active": True,
-        "week_label": "Reading: Putnam (1993), Chapters 3-4",
-        "title": "PIT-4: Measuring Institutional Performance",
-        "assigned_date": "2026-11-02 09:00",  # JST
-        "due_date": "2026-11-10 12:00",  # JST
+        "week_label": "Reading: Putnam (1993), Chapters 5-6",
+        "title": "PIT-5: Reading the Evidence for Civic Traditions",
+        "assigned_date": "2026-11-09 09:00",  # JST
+        "due_date": "2026-11-17 12:00",  # JST
         "reading": (
             "Robert D. Putnam. 1993. Making Democracy Work: Civic Traditions in "
-            "Modern Italy. Princeton University Press, pp. 63-82 (Ch. 3) and "
-            "pp. 83-120 (Ch. 4)."
+            "Modern Italy. Princeton University Press, pp. 121-162 (Ch. 5) and "
+            "pp. 163-185 (Ch. 6)."
         ),
         "scenario": (
-            "In 1970, Italy created twenty new regional governments with similar "
-            "formal structures and powers. Putnam and his colleagues followed "
-            "them for two decades and found that some performed far better than "
-            "others.\n\n"
-            "To compare them, Chapter 3 builds an index of **institutional "
-            "performance** from twelve indicators.\n\n"
-            "Chapter 4 then asks why performance differs. Putnam compares "
-            "**economic modernity** with the **civic community**, which he "
-            "measures with indicators such as associational life, newspaper "
-            "readership, referendum turnout, and preference voting.\n\n"
-            "Any measurement involves choices about what to count and what to "
-            "leave out. This week you will evaluate Putnam's choices and propose "
-            "one of your own."
+            "In Chapters 3 and 4, Putnam showed that Italy's regional governments "
+            "differ greatly in performance, and that these differences are "
+            "closely associated with the **civic community**.\n\n"
+            "Chapter 5 asks where the civic community comes from. Putnam looks "
+            "back into Italian history and tests his explanation against rival "
+            "ones. Much of his argument rests on **tables and figures**, not only "
+            "on narrative.\n\n"
+            "Chapter 6 then develops the theory behind these findings, using "
+            "ideas such as **collective action dilemmas** and **social "
+            "capital**.\n\n"
+            "This week you will read Putnam's evidence closely. Have the book "
+            "open while you work: the quiz asks about specific tables and "
+            "figures in Chapter 5, and you will need to look at them yourself."
         ),
         "question": (
-            "Putnam measures institutional performance with twelve indicators. "
-            "Identify one strength and one weakness of this measurement. Can you "
-            "suggest an alternative measurement that is feasible and addresses "
-            "the weakness that you identified?"
+            "Choose two tables/figures you think are the most important from "
+            "Chapter 5 (with the table/figure number) and explain what they show "
+            "and how they support Putnam's argument."
         ),
         "word_limit": (100, 120),
         "concepts": [
-            ("Institutional performance",
-             "How well a government responds to its constituents' demands and "
-             "acts effectively on them; Putnam's dependent variable."),
-            ("Twelve indicators",
-             "Cabinet stability, budget promptness, statistical and information "
-             "services, reform legislation, legislative innovation, day care "
-             "centers, family clinics, industrial policy instruments, "
-             "agricultural spending capacity, local health unit expenditures, "
-             "housing and urban development, bureaucratic responsiveness."),
-            ("Three aspects of government",
-             "Policy process, policy pronouncements, and policy implementation."),
-            ("Criteria for a good measure",
-             "Comprehensive, internally consistent, reliable (stable over time), "
-             "and corresponding to the objectives and evaluations of the "
-             "government's protagonists and constituents."),
-            ("Validation with surveys",
-             "Putnam compares the index with assessments by community leaders "
-             "and with citizens' satisfaction with their regional government."),
-            ("Economic modernity",
-             "The rival explanation of performance in Ch. 4: wealth, "
-             "industrialization, and socioeconomic development."),
             ("Civic community",
              "Civic engagement, political equality, solidarity, trust, and "
-             "associations; measured with associations, newspaper readership, "
-             "referendum turnout, and (inversely) preference voting."),
+             "associations; the explanation of institutional performance "
+             "introduced in Ch. 4."),
+            ("Civic traditions",
+             "Patterns of civic involvement that Putnam traces back through "
+             "Italian history in Ch. 5."),
+            ("Rival explanations",
+             "Alternative accounts of regional differences (e.g., economic "
+             "development) that Putnam tests against civic traditions."),
+            ("Collective action dilemmas",
+             "Situations in which everyone would gain from cooperation, but "
+             "individuals have incentives not to cooperate (Ch. 6)."),
+            ("Social capital",
+             "Features of social organization, such as trust, norms, and "
+             "networks, that facilitate coordinated action (Ch. 6)."),
         ],
         "opening_message": (
             "Hello! I'm your tutor for this week's quiz on Putnam's *Making "
-            "Democracy Work* (Chapters 3-4). I won't write the answer for you, "
-            "and I won't tell you which strength or weakness to choose. I'll "
-            "help you develop and test your own argument.\n\n"
-            "To start: looking at Putnam's twelve indicators, **what do you see "
-            "as one strength and one weakness** of measuring performance this "
-            "way? A first rough idea is fine."
+            "Democracy Work* (Chapters 5-6). Please have the book open: this "
+            "quiz is about the tables and figures in Chapter 5, and I won't "
+            "describe them for you or tell you which ones to choose. I'll help "
+            "you develop and test your own reading.\n\n"
+            "To start: **which two tables/figures from Chapter 5 have you "
+            "chosen?** Tell me their numbers and, in your own words, what each "
+            "one shows."
         ),
         "tutor_extra": (
-            "Your role this week is to draw out and strengthen the student's OWN "
-            "evaluation, not to lead them to a particular answer.\n"
-            "Neutrality rules (very important):\n"
-            "- Do NOT suggest, hint at, or rank specific strengths, weaknesses, "
-            "or alternative measurements, even as 'examples' or 'one possibility "
-            "is...'. Do not steer students toward any favored critique (e.g., "
-            "outputs vs. outcomes, citizen experience, normative bias, a single "
-            "indicator's validity) or any favored alternative (e.g., audit "
-            "studies, outcome statistics, surveys).\n"
-            "- Always ask first what the student thinks, then respond to THEIR "
-            "idea. If a student has no idea yet, ask open questions that make "
-            "them look at the measure themselves (e.g., 'Go through the twelve "
-            "indicators. Which one would you trust most, and which least? Why?', "
-            "'What do you think Putnam wanted the index to capture?', 'If you "
-            "were a citizen of one of these regions, what would good government "
-            "mean to you?'), without supplying the answer.\n"
-            "If a student does not apparently read the book and rather asks about "
-            "what is written in the book or what a particular concept stands for, "
-            "push back and suggest to check on the book herself or himself.\n"
-            "- Any reasonable, well-argued strength, weakness, or alternative is "
-            "acceptable. Evaluate the reasoning, not whether it matches a "
-            "particular view.\n"
-            "How to give constructive advice:\n"
-            "1. Make sure the answer covers all three parts: one strength, one "
-            "weakness, and an alternative measurement.\n"
-            "2. Ask the student to ground the strength and weakness in what "
-            "Putnam actually does in Chapter 3 (which indicators, which criteria, "
-            "how he validates the index). When a claim is vague or general, ask "
-            "them to point to the relevant part of the book. If a claim "
-            "conflicts with the text, ask them to re-check the relevant pages "
-            "rather than correcting the content for them in detail; you may "
-            "state plainly that Putnam addresses the point and say where (e.g., "
-            "the comparison with leader and citizen surveys). Chapter 4 may be "
-            "used if it supports their argument (e.g., how the performance index "
-            "is used to compare explanations), but is not required.\n"
-            "3. Check the logical link: does the alternative actually address "
-            "the weakness the student identified? Ask 'How exactly would your "
-            "measure fix the problem you described?'\n"
-            "4. Check feasibility by asking the student to specify: what would "
-            "be measured, who would collect the data, how, and for how many "
-            "regions or over what period. Ask whether it could be compared "
-            "across all twenty regions as Putnam does.\n"
-            "5. Encourage them to consider a cost of their own alternative, "
-            "e.g., whether it would still meet Putnam's criteria "
-            "(comprehensiveness, consistency, reliability), or whether it might "
-            "measure something other than institutional performance. Let the "
-            "student find the problem; do not name it for them.\n"
-            "6. Help them fit the answer into 100-120 words: strength, weakness, "
-            "alternative, and why the alternative addresses the weakness.\n"
+            "Your role this week is to help students who have READ Chapter 5 "
+            "build their own explanation of two tables/figures. The purpose of "
+            "this quiz is to make students look at the book themselves.\n"
+            "Important: you do NOT have the book in front of you, and you "
+            "cannot reliably know the numbers, titles, axes, variables, or "
+            "page numbers of Putnam's tables and figures.\n"
+            "Strict rules (very important):\n"
+            "- NEVER state, guess, or hint at any table/figure number, title, "
+            "page number, or content (what variables it uses, what pattern it "
+            "shows, which regions stand out), even as an 'example' or 'one "
+            "possibility is...'.\n"
+            "- NEVER suggest which tables/figures are important, and never rank "
+            "them. Do not summarize Chapter 5's findings or evidence.\n"
+            "- NEVER confirm or deny whether a student's figure number or "
+            "description matches the book. If they ask 'Is Figure X about "
+            "...?', reply that you cannot check this and that they should "
+            "verify it against the book.\n"
+            "- If there are signs that the student has not read the chapter, "
+            "do not provide answers or hints. Instead, ask them to open Chapter "
+            "5, look through its tables and figures themselves, and come back "
+            "with the numbers and what they see. Signs include: asking what "
+            "tables/figures are in Chapter 5, asking which ones to choose, "
+            "asking you to summarize the chapter, giving no table/figure "
+            "number, describing a figure only in vague or general terms, or "
+            "being unable to say what is on the axes or in the rows and "
+            "columns. Repeat this redirection as often as needed, politely and "
+            "without accusing the student.\n"
+            "- Any two tables/figures from Chapter 5 are acceptable if the "
+            "choice is well justified. Evaluate the reasoning, not whether it "
+            "matches a particular view.\n"
+            "How to give constructive advice (only after the student reports "
+            "two tables/figures with numbers and descriptions in their own "
+            "words):\n"
+            "1. Ask them to describe each table/figure precisely, based on what "
+            "they see: What is measured? What are the axes, or the rows and "
+            "columns? What time periods or regions are covered? What pattern "
+            "or result stands out? If a description is vague, ask them to look "
+            "at the table/figure again rather than filling in details.\n"
+            "2. Ask why they think these two are the MOST important. What would "
+            "be missing from Putnam's argument without them?\n"
+            "3. Check the link to the argument: which specific claim of "
+            "Putnam's does each table/figure support, and how? Make sure they "
+            "explain how it supports the argument, not only what it shows.\n"
+            "4. Ask how the two tables/figures relate to each other: do they "
+            "support the same claim, or different steps of the argument?\n"
+            "5. Encourage them to think about what the evidence can and cannot "
+            "show (e.g., 'Does the table/figure itself show this, or is it "
+            "Putnam's interpretation?'). Let the student find the issue; do "
+            "not name it for them.\n"
+            "6. Help them fit the answer into 100-120 words: two table/figure "
+            "numbers, what each shows, and how each supports Putnam's "
+            "argument.\n"
             "Common issues to address gently (by asking, not by supplying an "
             "answer):\n"
-            "- Confusing the institutional performance index (Ch. 3, the outcome "
-            "to be explained) with the civic community index (Ch. 4, an "
-            "explanation).\n"
-            "- Critiquing Putnam's explanation (civic traditions) instead of his "
-            "measurement of performance.\n"
-            "- Listing several strengths or weaknesses superficially instead of "
-            "developing one of each.\n"
-            "- Proposing an alternative that is unrelated to the weakness, or "
-            "that is not realistically feasible (e.g., 'measure everything "
-            "citizens experience')."
+            "- Choosing tables/figures from Chapters 3, 4, or 6 instead of "
+            "Chapter 5.\n"
+            "- Omitting the table/figure numbers.\n"
+            "- Describing the tables/figures without explaining how they "
+            "support Putnam's argument.\n"
+            "- Explaining Putnam's general argument without connecting it to "
+            "the specific tables/figures chosen."
         ),
     },
 ]
